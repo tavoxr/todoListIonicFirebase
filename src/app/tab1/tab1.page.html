@@ -1,12 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Tareas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
+  <ion-row  size-sm="12">
+<ion-col size-lg="3"></ion-col>
+    <ion-col size-xs="12" size-sm="12" size-md="12" size-lg="6" >
+
+  
+<div class="container" >
+  <div class="containerCol" *ngFor="let tarea of tareas">
+  <!--<app-tarea  [dataEntrante]="tarea" ></app-tarea>-->
+
+
+  <div [style.text-decoration]="tarea.completado? 'line-through' :'none'"   class="tareaContainer">
+    <div [routerLink]="['/detalle-tarea',tarea.id]" class="title">
+      <p>{{tarea.titulo}}</p>
+    </div>
+    <div  (click)="getDatosTarea(tarea)" class="completed">
+      <ion-checkbox    [(ngModel)]="tarea.completado" ></ion-checkbox>
+    </div>
+  </div>
+
+
+
+  
+</div>
+</div>
+</ion-col>
+</ion-row>
+</ion-content>
+<!--<ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 1</ion-title>
@@ -15,3 +43,4 @@
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+-->

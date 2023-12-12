@@ -1,0 +1,8 @@
+<div  class="tareaContainer">
+  <div class="title">
+    <p>{{dataEntrante.titulo}}</p>
+  </div>
+  <div class="completed">
+    <ion-checkbox (click)="getDatosTarea(dataEntrante)" [(ngModel)]="isCompleted" ></ion-checkbox>
+  </div>
+</div>

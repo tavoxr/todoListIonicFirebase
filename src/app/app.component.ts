@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { FirestoreService } from './services/firestore.service';
+import { computeStackId } from '@ionic/angular/common/directives/navigation/stack-utils';
+
+import { Tarea } from './models/models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,22 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+
+  
+  tareas : any = [];
+  constructor(private firestore: FirestoreService) {  }
+
+
+ngOnInit(): void{
+
+  this.tareas = this.firestore.getTareas();
+
 }
+
+
+}
+
+
+
+

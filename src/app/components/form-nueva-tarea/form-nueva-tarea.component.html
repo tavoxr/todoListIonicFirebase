@@ -1,0 +1,33 @@
+
+
+<!--
+  <div>
+    <input type="text" placeholder="titulo" />
+  </div>
+  <div>
+    <input type="text" placeholder="descripcion" />
+  </div>
+  <div>
+    <input type="checkbox"  />
+  </div>
+-->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <ion-label> Nueva Tarea</ion-label>
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-item>
+    <ion-input [(ngModel)]="data.titulo" placeholder="titulo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea [(ngModel)]="data.descripcion"  placeholder="descripcion"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox [(ngModel)]="data.completado"  labelPlacement="start">Completada: </ion-checkbox>
+  </ion-item>
+  <ion-button (click)="crearNuevaTarea()" expand="block" size="default" >Crear</ion-button>
+</ion-card>
+
+

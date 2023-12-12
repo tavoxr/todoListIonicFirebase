@@ -1,21 +1,3 @@
-.container{
-    //background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-
-.containerCol{
- //   background-color: red;
-    width: 90%;
-
-}
-
-
 .tareaContainer{
     background-image: linear-gradient(to left, #1aaebe, #105b8c );
     display: flex;
@@ -41,16 +23,3 @@
 h2{
     text-align: center;
 }
-
-
-ion-col{
-    
-    
-   text-align: center;
-}
-
-
-ion-checkbox{
-    --checkbox-background-checked: rgb(41, 146, 41);
-}
-

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle Tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col size-lg="3" size-xl="3"></ion-col>
+  <ion-col size-xs="12" size-md="12" size-sm="12" size-lg="6" size-xl="6">
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <ion-label> Editar Tarea</ion-label>
+    </ion-card-title>
+  </ion-card-header>
+
+  
+  <ion-item>
+    <ion-input [(ngModel)]="tarea.titulo"  placeholder="titulo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea  [(ngModel)]="tarea.descripcion" placeholder="descripcion"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox   [(ngModel)]="tarea.completado" labelPlacement="start">Completada: </ion-checkbox>
+  </ion-item>
+  <ion-button (click)="editarTarea()" expand="block"  size="default" >Editar</ion-button>
+  <ion-button (click)="eliminarTarea()" color="danger" expand="block" size="default" >Eliminar</ion-button>
+  <ion-button [routerLink]="['']" color="tertiary" expand="block" size="default" >Regresar</ion-button>
+</ion-card>
+</ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>
+
